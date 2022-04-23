@@ -42,6 +42,10 @@ header {
   box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
 }
 
+header * {
+  font-size: 1rem;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -61,7 +65,7 @@ h1 {
   padding-bottom: calc(((1080/1920) * 85%)/2);
   padding-left: 0;
   padding-right: 0;
-  margin: 2rem;
+  margin: 1rem 1rem 0 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 10px;
 
@@ -84,6 +88,43 @@ img {
 /* Hide image if source is empty */
 img[src=""] {
   display: none;
+}
+
+.pokemon-data {
+  width: 85%;
+  height: 2rem;
+  margin: 1rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.pokemon-data .data {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 8px;
+}
+
+.pokemon-data .types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.generation {
+  color: white;
+  background-color: black;
+}
+
+.types li {
+  color: white;
+  background-color: purple;
 }
 
 .play-area {
@@ -112,7 +153,6 @@ img[src=""] {
   flex-basis: 40%;
 }
 
-
 .play-area > .answer-area {
   height: 50px;
   flex-basis: 100%;
@@ -126,7 +166,6 @@ img[src=""] {
   justify-content: center;
   align-items: center;
 }
-
 
 .answer-area .user-answer,
 .answer-area .answer {
@@ -197,6 +236,10 @@ button {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .correct {
   background-color: rgb(211, 255, 211) !important;
 }
@@ -216,42 +259,21 @@ button {
 footer {
   background-color: white;
   width: 100%;
-  height: 30px;
-  padding: 10px;
-  margin-top: 100px;
+  margin: 3em 2em 3em 2em;
+  font-size: 0.5em;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-}
-
-footer > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 1em;
 }
 
 @media screen and (max-width: 400px) {
-  header {
-    font-size: 0.8rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .play-area {
-    padding: 1rem;
-
-  }
-
-  .play-area > div {
-    flex-basis: 40%;
-  }
-
+  header * {font-size: 0.6rem;}
+  h1 {font-size: 1.5rem;}
+  .play-area {padding: 1rem;}
+  .play-area > div {flex-basis: 40%;}
   .play-area .answer-area {
     margin-top: 0;
     flex-basis: 100%;
@@ -267,6 +289,7 @@ footer > div {
 
   h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
 
   .img-area {
@@ -299,7 +322,6 @@ footer > div {
     flex-basis: 100%;
     order: 4;
   }
-
 }
 
 
