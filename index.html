@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Who's That Pokémon?</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/a7a2c3e7aa.js" crossorigin="anonymous"></script>
+
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">How To Play</a></li>
+					<li><a href="https://www.pokemon.com/us/pokedex/" target="_blank" rel="noopener noreferrer">Official Pokédex</a></li>
+					<li><a href="">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h1>Who's That Pokémon?</h1>
+		<div class="img-area">
+			<img src="" id="pokemon" class="silhouette" alt="Pokémon silhouette">
+		</div>
+
+		<div class="play-area">
+			<div class="controls-new">
+				<button type="button" class="btn" id="btn-new">New Pokemon</button>
+			</div>
+			<div class="controls-answer">
+				<button type="button" class="btn" id="btn-checkAnswer">Submit</button>
+			</div>
+			<div class="answer-area">
+				<h2 class="hidden answer">Answer</h2>
+				<input class="user-answer" type="text">
+			</div>
+			<div class="idk">
+				<button type="button" id="btn-idk">I don't know!</button>
+			</div>
+		</div>
+
+		<footer>
+			<a href="https://github.com/leifaj" target="_blank" rel="noopener noreferrer"><i class="fa fa-brands fa-github fa-2x"></i></a>
+			<p>All images © Nintendo.</p>
+			<p>Pokémon data from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI.</a></p>
+		</footer>
+
+
+		<script type="text/javascript" src="js/main.js" ></script>
+
+	</body>
+</html>

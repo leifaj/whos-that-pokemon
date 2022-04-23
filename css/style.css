@@ -1,0 +1,310 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 3rem;
+  box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.img-area {
+  width: 85%;
+  height: 0;
+  padding-top: calc(((1080/1920) * 85%)/2);
+  padding-bottom: calc(((1080/1920) * 85%)/2);
+  padding-left: 0;
+  padding-right: 0;
+  margin: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
+
+  background-image: url("../img/background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+img {
+  padding-left: 10vw;
+  width: 45%;
+  filter: drop-shadow(0.5rem 0.7rem 0 rgba(47, 109, 181, 0.4));
+}
+
+/* Hide image if source is empty */
+img[src=""] {
+  display: none;
+}
+
+.play-area {
+  width: 85%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+.play-area > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 40%;
+}
+
+
+.play-area > .answer-area {
+  height: 50px;
+  flex-basis: 100%;
+  font-size: 2rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.answer-area .user-answer,
+.answer-area .answer {
+  width: 100%;
+  background-color: transparent;
+  font-size: 2rem;
+  border-radius: 50px;
+  text-align: center;
+  border: none;
+}
+
+.play-area .idk {
+  flex-basis: 100%;
+}
+
+textarea:focus,
+input:focus{
+  outline: none;
+}
+
+button {
+  width: 90%;
+  background-color: white;
+}
+
+.btn {
+  max-width: 200px;
+  width: 100%;
+  white-space: nowrap;
+  align-items: center;
+  background-color: #2c70b7;
+  border: 0;
+  border-radius: 100px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.btn:hover { 
+  background-color: #4a8cd3;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+#btn-idk {
+  border: none;
+  background-color: transparent;
+  font-style: italic;
+  font-weight: 700;
+  color: #2c70b7;
+}
+
+#btn-idk:hover {
+  color: red;
+}
+
+/* Toggle visibility of certain elements */
+
+.silhouette {
+  filter: brightness(0) drop-shadow(0.5rem 0.7rem 0 rgba(47, 109, 181, 0.4));
+}
+
+.hidden {
+  display: none;
+}
+
+.correct {
+  background-color: rgb(211, 255, 211) !important;
+}
+
+.incorrect {
+  background-color: #ffbdbb !important;
+}
+
+#btn-idk.disabled {
+  color: rgba(166, 166, 166, 0.6);
+}
+
+#btn-checkAnswer.disabled {
+  background-color: rgba(166, 166, 166, 0.6);
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  margin-top: 100px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .play-area {
+    padding: 1rem;
+
+  }
+
+  .play-area > div {
+    flex-basis: 40%;
+  }
+
+  .play-area .answer-area {
+    margin-top: 0;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body * {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .img-area {
+    width: 65%;
+    padding-top: calc(((1080/1920) * 65%)/2);
+    padding-bottom: calc(((1080/1920) * 65%)/2);
+  }
+
+  .play-area {
+    width: 65%;
+  }
+
+  .play-area .controls-new {
+    order: 1;
+    flex-basis: 25%;
+  }
+
+  .play-area .idk {
+    order: 2;
+    flex-basis: 25%;
+  }
+
+  .play-area .controls-answer {
+    order: 3;
+    flex-basis: 25%;
+  }
+
+  .play-area .answer-area {
+    margin-top: 0;
+    flex-basis: 100%;
+    order: 4;
+  }
+
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
