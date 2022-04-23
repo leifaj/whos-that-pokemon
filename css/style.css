@@ -26,6 +26,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 body > * {
@@ -38,7 +39,6 @@ header {
   width: 100%;
   height: 50px;
   padding: 10px;
-  margin-bottom: 3rem;
   box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
 }
 
@@ -56,6 +56,30 @@ nav ul {
 h1 {
   font-weight: 700;
   font-size: 2rem;
+  margin: 2rem 0 2rem 0;
+}
+
+main {
+  width: 55%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions ol {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  line-height: auto;
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.instructions ol * {
+  font-size: 1.15em;
 }
 
 .img-area {
@@ -65,7 +89,7 @@ h1 {
   padding-bottom: calc(((1080/1920) * 85%)/2);
   padding-left: 0;
   padding-right: 0;
-  margin: 1rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 10px;
 
@@ -92,8 +116,8 @@ img[src=""] {
 
 .pokemon-data {
   width: 85%;
-  height: 2rem;
-  margin: 1rem;
+  height: 2em;
+  margin: 1em;
 
   display: flex;
   flex-flow: row nowrap;
@@ -171,7 +195,7 @@ img[src=""] {
 .answer-area .answer {
   width: 100%;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 1.7rem;
   border-radius: 50px;
   text-align: center;
   border: none;
@@ -259,8 +283,10 @@ button {
 footer {
   background-color: white;
   width: 100%;
-  margin: 3em 2em 3em 2em;
+  height: 200px;
+  margin-top: auto;
   font-size: 0.5em;
+  bottom: 0;
 
   display: flex;
   flex-flow: column nowrap;
@@ -270,14 +296,16 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-  header * {font-size: 0.6rem;}
+  header * {font-size: 0.8rem;}
   h1 {font-size: 1.5rem;}
+  .instructions ol * {font-size: 1em;}
   .play-area {padding: 1rem;}
   .play-area > div {flex-basis: 40%;}
   .play-area .answer-area {
     margin-top: 0;
     flex-basis: 100%;
   }
+  
 }
 
 @media screen and (min-width: 900px) {
