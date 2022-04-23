@@ -61,7 +61,6 @@ function getPoke(){
   fetch(`https://pokeapi.co/api/v2/pokemon/${randomID}`)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data.species.name)
         let name = data.species.name;
         document.querySelector('h2').innerText = name[0].toUpperCase() + name.slice(1); // Update answer
         document.querySelector('img').src = data.sprites.other['official-artwork'].front_default; // Update image
