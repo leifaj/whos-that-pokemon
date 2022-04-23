@@ -1,4 +1,4 @@
-# whos-that-pokemon
+# Who's That Pokémon?
 A Pokémon guessing game! Try to guess the Pokémon based off of its silhouette.
 
 1. Press "New Pokémon" to get a new question.
