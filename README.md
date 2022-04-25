@@ -6,4 +6,4 @@ A Pokémon guessing game! Try to guess the Pokémon based off of its silhouette.
 3. If your answer is wrong, the box turns red and you can try again. If your answer is correct, the box turns green.
 4. See how many you can guess correctly!
 
-<img src="/img/poke-demo.gif" alt="Gameplay example of correct/incorrect guesses" width="60%">
+<img src="/img/poke-demo.gif" alt="Gameplay example of correct/incorrect guesses" width="100%">
